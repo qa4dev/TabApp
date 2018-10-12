@@ -1,0 +1,54 @@
+<ion-menu [content]="content">
+    <ion-header>
+        <ion-toolbar>
+            <ion-title>Menu</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <ion-list no-lines>
+            <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+                {{p.title}}
+            </button>
+            <button ion-item (click)="openAboutUs()">
+                About us
+            </button>
+        </ion-list>
+        <ion-list no-lines *ngIf="aboutus == true" class="aboutlist">
+            <button menuClose ion-item *ngFor="let about of aboutPages" (click)="openPage(about)" class="aboutbuttons">
+                <ion-icon name="person"></ion-icon>
+                {{about.title}}
+            </button>
+        </ion-list>
+    </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+
+<div class="topBgGradiant"></div>
+<ion-header class="homeHeader headerAll">
+    <ion-navbar color="headercolor">
+        <ion-buttons start class="hdrIcons order1">
+            <button ion-button icon-only menuToggle>
+                <span class="iconHdr menu"></span>
+            </button>
+            <button ion-button icon-only>
+                <span class="iconHdr home"></span>
+            </button>
+        </ion-buttons>
+        <ion-buttons end class="hdrIcons order3">
+            <button ion-button icon-only (tap)="addrequest()">
+                <span class="iconHdr add"></span>
+            </button>
+            <button ion-button icon-only (tap)="addtravel()">
+                <span class="iconHdr travel"></span>
+            </button>
+            <button ion-button icon-only (tap)="mycart()">
+                <span class="iconHdr cart"></span>
+            </button>
+        </ion-buttons>
+        <ion-searchbar class="headerSearch order2" (input)="getItems($event)"></ion-searchbar>
+    </ion-navbar>
+</ion-header>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

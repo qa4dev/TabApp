@@ -1,0 +1,43 @@
+<ion-content padding id="page2">
+    <ion-grid>
+        <ion-row class="gridrow">
+            <ion-col class="gridcol">
+            </ion-col>
+            <ion-col>
+                <div class="colmiddle">
+                    <h5>How It Works</h5>
+                </div>
+            </ion-col>
+            <ion-col class="gridcol">
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <div class="spacer" style="height:40px; padding-top: 15px;" id="faq-spacer1">
+        <h6>{{heading}}</h6>
+    </div>
+
+    <ion-grid style="padding: 15px;">
+        <ion-row class="row" *ngFor="let res of data">
+            <ion-col col-6 *ngIf="res.key1">
+                <img src={{res.key1.image}} class="img" />
+                <h6 class="heading">{{res.key1.title}}</h6>
+                <div class="desc">{{res.key1.content}}</div>
+            </ion-col>
+            <ion-col col-6 *ngIf="res.key2">
+                <img src={{res.key2.image}} class="img" />
+                <h6 class="heading">{{res.key2.title}}</h6>
+                <div class="desc">{{res.key2.content}}</div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <ion-grid>
+        <div class="spacer" style="height:40px; padding-top:15px;" id="faq-spacer1">
+            <strong>
+                <i style="font-size: 13px;">Notes</i>
+            </strong>
+        </div>
+        <div class="notesdiv" *ngFor="let note of notes; let i = index">{{i+1}}
+            <span>{{note.notes}}</span>
+        </div>
+    </ion-grid>
+</ion-content>

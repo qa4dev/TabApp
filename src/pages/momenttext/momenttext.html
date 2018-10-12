@@ -1,0 +1,29 @@
+
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>momenttext</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <button (tap)="dismisspopup()">dismiss</button>
+
+    <div>
+        <form #heroForm="ngForm" (ngSubmit)="save()">
+            <ion-list>
+                <ion-item>
+                    <ion-textarea placeholder="Enter Text" name="text" [(ngModel)]="data.text"></ion-textarea>
+                </ion-item>
+            </ion-list>
+            <div>
+                <ion-buttons>
+                    <button ion-button type="submit" end>Save</button>
+                </ion-buttons>
+            </div>
+        </form>
+
+    </div>
+</ion-content>

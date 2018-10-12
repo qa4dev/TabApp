@@ -1,0 +1,31 @@
+<ion-content padding id="page2">
+  <ion-grid>
+      <ion-row class="gridrow">
+          <ion-col class="gridcol">
+          </ion-col>
+          <ion-col>
+              <div class="colmiddle">
+                  <h5>About TAB</h5>
+              </div>
+          </ion-col>
+          <ion-col class="gridcol">
+          </ion-col>
+      </ion-row>
+  </ion-grid>
+  <div class="spacer" style="height:10px;" id="faq-spacer1"></div>
+  <div>
+      <P *ngFor="let paragraph of about_paragraphs">{{paragraph.para}}</P>
+      <ion-grid style="padding: 15px;">
+          <ion-row class="row" *ngFor="let res of data">
+              <ion-col *ngIf="res.key1">
+                  <img src={{res.key1.image}} class="img" />
+                  <div class="desc">{{res.key1.content}}</div>
+              </ion-col>
+              <ion-col  *ngIf="res.key2">
+                  <img src={{res.key2.image}} class="img" />
+                  <div class="desc">{{res.key2.content}}</div>
+              </ion-col>
+          </ion-row>
+      </ion-grid>
+  </div>
+</ion-content>

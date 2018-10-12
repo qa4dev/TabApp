@@ -1,0 +1,57 @@
+<ion-buttons end>
+        <button (tap)="dismiss()" class="closebtn">
+            <ion-icon name="md-close"></ion-icon>
+        </button>
+    </ion-buttons>
+<ion-content class="addtravel addrequestformpopup same_sec_pad_topbtm">
+    <ion-grid>
+        <ion-row class="pop_trip_top_sec">
+            <ion-avatar item-start>
+                <img src="assets/imgs/avatar-gollum.jpg" />
+            </ion-avatar>
+            <h3>MyName
+                <span> (
+                    <ion-icon name="person" class="personicon"></ion-icon> 4.1)</span>
+            </h3>            
+        </ion-row>
+
+    </ion-grid>
+    <div class="travelcontent">
+        <form #heroForm="ngForm" (ngSubmit)="saveTravel()">
+            <ion-row>
+                <ion-col col-12>
+                    <ion-label class="label">COUNTRY</ion-label>
+                    <ion-item class="boxes">
+                        <ion-select class="profileCount" name="country_code" [(ngModel)]="data.country_code">
+                            <ion-option *ngFor="let cntry of countries" value="{{cntry.country_code}}">
+                                {{cntry.name}}
+                            </ion-option>
+                        </ion-select>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-12>
+                    <ion-label class="label">DEPARTURE DATE</ion-label>
+                    <ion-item class="boxes">
+                        <ion-datetime displayFormat="MMM DD YYYY" name="departureDate" [(ngModel)]="data.departureDate" min={{mindate}} max={{maxdate}}></ion-datetime>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-12>
+                    <ion-label class="label">ARRIVAL DATE</ion-label>
+                    <ion-item class="boxes">
+                        <ion-datetime displayFormat="MMM DD YYYY" name="arrivalDate" [(ngModel)]="data.arrivalDate" min={{mindate}} max={{maxdate}}></ion-datetime>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                    <ion-col col-12>
+                <button block class="submit" type="submit">Submit</button>
+                </ion-col>
+            </ion-row>
+        </form>
+    </div>
+
+</ion-content>

@@ -1,0 +1,34 @@
+<ion-content padding id="page2">
+    <ion-grid>
+        <ion-row class="gridrow">
+            <ion-col class="gridcol">
+            </ion-col>
+            <ion-col>
+                <div class="colmiddle">
+                    <h5>FAQ</h5>
+                </div>
+            </ion-col>
+            <ion-col class="gridcol">
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <div class="spacer" style="height:30px;" id="faq-spacer1"></div>
+    <div id="faq-container3">
+        <ion-list id="faq-list11">
+            <ion-item id="faq-list-item15" class="faqitem" text-wrap *ngFor="let faq of faqs">
+                <div id="faq-markdown9" class="show-list-numbers-and-dots quetion">
+                    <p style="color:#0D69AA;font-size:17px;">
+                        {{faq.ques}}
+                        <ion-icon name="arrow-down" class="arrow" (tap)="showAns(faq.id)" *ngIf="faq.show == false"></ion-icon>
+                        <ion-icon name="arrow-up" class="arrow" (tap)="hideAns(faq.id)" *ngIf="faq.show == true"></ion-icon>                        
+                    </p>
+                </div>
+                <div id="faq-markdown10" class="show-list-numbers-and-dots answer" *ngIf="faq.show == true">
+                    <p style="color:#000000;font-size:15px;margin-top: 6px;">
+                        {{faq.ans}}
+                    </p>
+                </div>
+            </ion-item>
+        </ion-list>
+    </div>
+</ion-content>

@@ -1,0 +1,136 @@
+<ion-buttons end>
+        <button (tap)="dismiss()" class="closebtn">
+            <ion-icon name="md-close"></ion-icon>
+        </button>
+    </ion-buttons>
+<ion-content class="addrequestformpopup same_sec_pad_topbtm">
+    <div class="container">       
+    <div class="formContainer same_sec_pad_topbtm addrequestform">
+        <div class="uploadImg">
+            <div class="reqImgShow" *ngIf="data.picture == ''">
+                <img src="assets/images/uploadThumbImg.png" alt="upload"/>
+            </div>
+            <div class="reqImgShow" *ngIf="data.picture != ''">
+                <img src="{{'data:image/jpeg;base64,'+data.picture}}" alt="upload"/>
+            </div>
+            <a href="javascript:void(0);" class="buttonUpload" (tap)="uploadPhoto()">Upload Or Capture Photo(s)</a>
+        </div>
+        <form #heroForm="ngForm" (ngSubmit)="saveRequest()">
+                
+        <div class="formInputs">
+            <div class="formSections">
+                <div class="formHead">
+                    <span class="setCount">1</span>
+                    <p>Item Details</p>
+                    <span class="infoIcon"></span>
+                </div>
+                <div class="formSetInner">
+                    <div class="formSetBg">
+                        <div class="formGroup">
+                            <label class="labelForm">PRODUCT NAME</label>
+                            <input type="text" class="inputFiled" name="product_name" [(ngModel)]="data.product_name"/>
+                        </div>
+                        <div class="formGroup">
+                            <label class="labelForm">PRODUCT DESCRIPTION</label>
+                            <textarea class="textarea" name="product_desc" [(ngModel)]="data.product_desc"></textarea>
+                        </div>
+                        <div class="formGroup">
+                            <label class="labelForm labelCheckbox">
+                                <input type="checkbox" checked="true" name="receipt" [(ngModel)]="data.receipt"/> Receipt </label>
+                            <label class="labelForm labelCheckbox">
+                                <input type="checkbox" checked="true" name="authenticitycard" [(ngModel)]="data.authenticitycard"/> Authenticity card </label>
+                        </div>
+                        <div class="formGroup">
+                            <label class="labelForm">CATEGORY</label>
+                            
+                            <ion-select class="selectBox" name="category" [(ngModel)]="data.category">
+                                    <ion-option selected value="">dfgdfgdd</ion-option>                   
+                                <ion-option *ngFor="let productcategory of productcategories" value="{{productcategory.name}}">
+                                    {{productcategory.name}}</ion-option>
+                            </ion-select>
+                        </div>
+                        <div class="formGroup">
+                            <label class="labelForm">SIZE</label>
+                            <input type="text" class="inputFiled" name="size" [(ngModel)]="data.size"/>
+                        </div>
+                        <div class="formGroup">
+                            <label class="labelForm">REFERENCE WEBSITE</label>
+                            <input type="text" class="inputFiled" name="referencewebsite" [(ngModel)]="data.referencewebsite"/>
+                        </div>
+                        <div class="formGroup">
+                            <label class="labelForm">EXPECT TO RECEIVE ON?</label>
+                            <ion-item class="boxes">
+                                <ion-datetime class="inputFiled calendar" displayFormat="MMM DD YYYY" name="accept_to_recive_on" [(ngModel)]="data.accept_to_recive_on" min={{mindate}} max={{maxdate}}></ion-datetime>
+                            </ion-item>
+                            <!-- <input type="text" class="inputFiled calendar" name="accept_to_recive_on" [(ngModel)]="data.accept_to_recive_on"/> -->
+                        </div>
+                        <div class="formGroup">
+                            <label class="labelForm">COUNTRY</label>
+                            <ion-select class="selectBox" name="country_code" [(ngModel)]="data.country_code">
+                                <ion-option *ngFor="let cntry of countries" value="{{cntry.country_code}}">
+                                    {{cntry.name}}
+                                </ion-option>
+                            </ion-select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="formSections">
+                <div class="formHead">
+                    <span class="setCount">2</span>
+                    <p>Shipping Method</p>
+                    <span class="infoIcon"></span>
+                </div>
+                <div class="formSetInner">
+                    <div class="formSetBg">
+                        <div class="formGroup">
+                            <label class="labelForm">PREFER SHIPPING METHOD</label>
+                            <ion-select class="selectBox" name="shipping_method" [(ngModel)]="data.shipping_method">
+                                <ion-option *ngFor="let shippingmethod of shippingmethods" value="{{shippingmethod.shipping_method_name}}">
+                                    {{shippingmethod.shipping_method_name}}</ion-option>
+                            </ion-select>
+                        </div>
+                        <div class="formGroup">
+                            <label class="labelForm labelCheckbox">
+                                <input type="checkbox" checked="true" name="prishable" [(ngModel)]="data.prishable"/> Perishable </label>
+                            <label class="labelForm labelCheckbox">
+                                <input type="checkbox" checked="true" name="fragile" [(ngModel)]="data.fragile"/> Fragile
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="formSections">
+                <div class="formHead">
+                    <span class="setCount">3</span>
+                    <p>Price</p>
+                    <span class="infoIcon"></span>
+                </div>
+                <div class="formSetInner">
+                    <div class="formSetBg">
+                        <div class="formGroup">
+                            <label class="labelForm">WILLING TO PAY PER UNIT?</label>
+                            <input type="text" class="inputFiled" name="pay_per_unit" [(ngModel)]="data.pay_per_unit"/>
+                        </div>
+                        <div class="formGroup">
+                            <label class="labelForm">QUANTITY</label>
+                            <input type="text" class="inputFiled" name="qty" [(ngModel)]="data.qty"/>
+                        </div>
+                        <div class="formGroup">
+                            <label class="labelForm">TOTAL AMOUNT PAYABLE</label>
+                            <input type="text" class="inputFiled" name="payable_amount" [(ngModel)]="data.payable_amount"/>
+                        </div>
+                        <p>Notes: Requester should includes Goods and Services Tax (GST), customs/excise duties and additional
+                            tips to reward traveler when filing up “WILLING TO PAY PER UNIT”. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ButtonBottom">
+            <button class="buttonBlue" type="submit">Submit Request</button>
+        </div>
+    </form>
+    
+    </div>
+</div>
+</ion-content>

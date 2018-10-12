@@ -1,0 +1,297 @@
+<!--
+  Generated template for the SettingPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!-- <ion-header>
+
+  <ion-navbar>
+    <ion-title>Setting</ion-title>
+  </ion-navbar>
+
+</ion-header> -->
+
+
+<ion-content>
+  <div class="container-fluid equal_page_top_margin">
+    <div class="container bg_equal_color_inner_pages Notification_sec">
+      <div class="row equal_sec_heading pad_10">
+        <div class="col-12 no_padding paddtopbtm">
+          <p>Notifications</p>
+        </div>
+        </div>
+        <div class="row pad_10">
+        <div class="col-12 no_padding">
+            <ion-item>
+                <ion-label>Email</ion-label>
+                <ion-toggle checked="true"></ion-toggle>
+              </ion-item>             
+            </div>
+            <div class="col-12 no_padding">
+                <ion-item>
+                    <ion-label>Push</ion-label>
+                    <ion-toggle checked="true"></ion-toggle>
+                  </ion-item>             
+                </div>
+      </div>          
+    </div>
+
+    <div class="container bg_equal_color_inner_pages Notification_sec">
+        <div class="row equal_sec_heading pad_10">
+          <div class="col-12 no_padding paddtopbtm">
+            <p>Linked Account</p>
+          </div>
+          </div>
+          <div class="row pad_10 settings_fb_sec">
+          <div class="col-6 Button_fb no_padding"> 
+            <div class="Setting_fb">            
+                <button ion-button full class="fbbutton" (tap)="fbLogin()"><img src="assets/images/fbIcon.png" alt="facebook"  (tap)="fbLogin()"/>Facebook</button>
+              </div>
+              </div>
+              <div class="col-6 no_padding text-right">
+                <img src="assets/images/Cross_icon.png">                           
+                  </div>                  
+                  <div class="col-6 Google_btn mt-4 no_padding"> 
+                      <div class="Setting_google">            
+                          <button ion-button full class="googlebutton" (click)="googleLogin()"><img src="assets/images/googleIcon.png" alt="facebook" (click)="googleLogin()"/>  Google</button>
+                        </div>
+                        </div>
+                        <div class="col-6 no_padding text-right mt-4">
+                          <img src="assets/images/Cross_icon.png">                           
+                            </div>
+        </div>          
+      </div>
+
+
+      <div class="container bg_equal_color_inner_pages Notification_sec">
+          <div class="row equal_sec_heading pad_10">
+            <div class="col-12 no_padding paddtopbtm">
+              <p>Personal Information</p>
+            </div>
+            </div>            
+                <form class="Personal_information settings_fb_sec">
+                    <div class="row pad_10">
+                        <div class="col-2 no_padding">                  
+                            <label for="exampleInputEmail1">Name</label>              
+                        </div>
+                        <div class="col-10 no_padding">
+                            <p>Alice113</p>
+                        </div>     
+                        </div>
+                        <div class="row pad_10">                   
+                  <div class="col-2 no_padding">                  
+                      <label for="exampleInputEmail1">Email</label>              
+                  </div>
+                  <div class="col-8 no_padding">
+                      <input type="email" class="form-control" id="" aria-describedby="emailHelp" value="Alice113@gamil.com">
+                  </div>
+                  <div class="col-2">
+                    <div class="btn_edit">
+                      <a href="#">Edit</a>
+                    </div>
+                  </div>                  
+                  </div> 
+                   <div class="row pad_10">                   
+                  <div class="col-2 no_padding">                  
+                      <label for="exampleInputEmail1">Email</label>              
+                  </div>
+                  <div class="col-8 no_padding">
+                      <input type="email" class="form-control" id="" aria-describedby="emailHelp" value="Alice113@gamil.com">
+                  </div>
+                  <div class="col-2">
+                    <div class="btn_edit">
+                      <a href="#">Edit</a>
+                    </div>
+                  </div>                  
+                  </div> 
+                  <div class="row pad_10">                   
+                      <div class="col-2 no_padding">                  
+                          <label for="exampleInputEmail1">Phone Number</label>              
+                      </div>
+                      <div class="col-8 no_padding">
+                          <input type="email" class="form-control" id="" aria-describedby="emailHelp" value="+6564651234">
+                      </div>
+                      <div class="col-2">
+                        <div class="btn_edit">
+                          <a href="#">Edit</a>
+                        </div>
+                      </div>                  
+                      </div> 
+                      <div class="row pad_10">                   
+                          <div class="col-2 no_padding">                  
+                              <label for="exampleInputEmail1">Change password</label>              
+                          </div>
+                          <div class="col-8 no_padding">
+                              <input type="email" class="form-control" id="" aria-describedby="emailHelp" value="+6564651234">
+                          </div>
+                          <div class="col-2">
+                            <div class="btn_edit">
+                              <a href="#">Edit</a>
+                            </div>
+                          </div>                  
+                          </div> 
+                          <div class="row pad_10">                   
+                              <div class="col-2 no_padding">                  
+                                  <label for="exampleInputEmail1">Delivery Address</label>              
+                              </div>
+                              <div class="col-8 no_padding">
+                                  <textarea class="form-control" id="" aria-describedby="emailHelp" value="+6564651234"></textarea>
+                              </div>
+                              <div class="col-2">
+                                <div class="btn_edit">
+                                  <a href="#">Edit</a>
+                                </div>
+                              </div>                  
+                              </div> 
+                              <div class="row pad_10">                   
+                                  <div class="col-2 no_padding">                  
+                                      <label for="exampleInputEmail1"></label>              
+                                  </div>
+                                  <div class="col-8 no_padding">
+                                    <div class="delivery_address">
+                                      <input type="radio" class="form-check-input" name="optradio"> <p>Same as delivery address</p> 
+                                    </div>                                   
+                                  </div>
+                                  <div class="col-2">                                    
+                                  </div>                  
+                                  </div>  
+                              <div class="row pad_10 no_padding">                   
+                                  <div class="col-2">                  
+                                      <label for="exampleInputEmail1">Pick up address</label>              
+                                  </div>
+                                  <div class="col-8 no_padding">
+                                      <textarea class="form-control" id="" aria-describedby="emailHelp" value="+6564651234"></textarea>
+                                  </div>
+                                  <div class="col-2">
+                                    <div class="btn_edit_add_new">
+                                      <a href="#">Add new</a>
+                                    </div>
+                                  </div>                  
+                                  </div>  
+                  </form>                
+        </div>
+
+    <div class="container bg_equal_color_inner_pages Notification_sec">
+        <div class="row equal_sec_heading pad_10">
+          <div class="col-12 no_padding paddtopbtm">
+            <p>Purchase Setting</p>
+          </div>
+          </div>
+          <div class="row pad_10">
+          <div class="col-12 no_padding">
+              <ion-item>
+                  <ion-label>Prefer meet up</ion-label>
+                  <ion-toggle checked="true"></ion-toggle>
+                </ion-item>             
+              </div>
+              <div class="col-12 no_padding">
+                  <ion-item>
+                      <ion-label>Courier</ion-label>
+                      <ion-toggle checked="true"></ion-toggle>
+                    </ion-item>             
+                  </div>
+        </div>          
+      </div>
+
+      <div class="container bg_equal_color_inner_pages Notification_sec">
+          <div class="row equal_sec_heading pad_10">
+            <div class="col-12 no_padding paddtopbtm">
+              <p>MY CREDIT / DEBIT CARD</p>
+            </div>
+            </div>
+            <div class="row pad_10">
+            <div class="col-10 no_padding">
+              <div class="equal_payment_sec mb-3">
+                      <div class="Payment_sec_heading">
+                    <p>Payment method</p>
+                      </div>
+                      <div class="bank_detail_code">
+                        <div class="radio_btn">
+                            <input type="radio" class="form-check-input" name="optradio"> <p>1234 xxxx xxxx 1234<span>|</span></p>
+                        </div>
+                        <div class="bank_name">
+                          <p>Induslnd bank</p><img src="assets/images/visa.png">
+                        </div>
+                      </div>  
+                      </div>
+                      </div>                       
+                <div class="col-2 no_padding text-right">
+                  <div class="delete_btn">
+                            <a href="#">Delete</a>
+                          </div>
+                  </div>    
+                  <div class="col-10 no_padding">
+                      <div class="equal_payment_sec">
+                          <div class="Payment_sec_heading">
+                        <p>Payment method</p>
+                          </div>
+                          <div class="bank_detail_code">
+                            <div class="radio_btn">
+                                <input type="radio" class="form-check-input" name="optradio"> <p>1234 xxxx xxxx 1234<span>|</span></p>
+                            </div>
+                            <div class="bank_name">
+                              <p>Induslnd bank</p><img src="assets/images/visa.png">
+                            </div>
+                          </div>  
+                          </div>    
+                </div>  
+                <div class="col-2 no_padding text-right">
+                    <div class="delete_btn">
+                              <a href="#">Delete</a>
+                            </div>
+                    </div>   
+                    <form class="new_card_details">
+                      <div class="row">
+                        <div class="col-12 mt-5 mb-4">
+                          <p class="add_new_card_head">Add new card</p>
+                        </div>
+                        <div class="col-12 mb-4">                           
+                            <input type="text" class="form-control" id="" aria-describedby="emailHelp" placeholder="Bank name">   
+                        </div>
+                        <div class="col-12 mb-4">                           
+                            <input type="text" class="form-control" id="" aria-describedby="emailHelp" placeholder="Card name">   
+                        </div>
+                        <div class="col-12 mb-4">                           
+                            <input type="text" class="form-control" id="" aria-describedby="emailHelp" placeholder="Card number">   
+                        </div>
+                        <div class="col-12 mb-4">                           
+                            <input type="text" class="form-control" id="" aria-describedby="emailHelp" placeholder="Expiry date">   
+                        </div>
+                      </div>
+
+                     
+                    </form>         
+          </div>          
+        </div>
+
+        <div class="container bg_equal_color_inner_pages Notification_sec">
+            <div class="row equal_sec_heading pad_10">
+              <div class="col-12 no_padding paddtopbtm">
+                <p>Clear history</p>
+              </div>
+              </div>
+              <div class="row pad_10 settings_fb_sec ">
+              <div class="col-12 no_padding">
+                 <div class="clear_history_btn"><a href="">Clear History</a></div>          
+                  </div>
+                
+            </div>          
+          </div>
+
+          <div class="container">
+            <div class="row pad_10 signout_sec mt-5 mb-5">
+              <div class="col-12 text-center">
+              <a href="#" class="Btn_signout">Sign out</a>
+            </div>
+            <div class="col-12 about_tab_content text-center mt-4">
+              <p>TAB app</p>
+              <p>Version 1.2.3</p>
+              <p>T & C I Privacy Policy</p>
+            </div>
+          </div>
+          </div>
+
+
+  </div>  
+</ion-content>

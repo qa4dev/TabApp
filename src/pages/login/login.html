@@ -1,0 +1,57 @@
+
+    
+    <!-- <ion-header  class="navBarLogin">
+        <ion-navbar>
+            <ion-title text-center class="logoColor">Take Across Border</ion-title>
+        </ion-navbar>
+    </ion-header> -->
+    
+    <ion-content class="myview equal_bg_gradiant_color" scrollX="true">
+            <div class="loginPage">
+        <div class="hedaer_sec">
+                <p>Take Across Border</p>
+                <img src="assets/images/Logo.png" class="header_logo">
+        </div>
+        <div  class="loginContainer">
+        <div class="loginFormOt">
+            <form #heroForm="ngForm" (ngSubmit)="Login()">
+                <ion-list class="loginInput">
+                    <ion-item  class="userIcon" >
+                        <ion-input type="text"placeholder="Username" name="username" [(ngModel)]="data.username" #username="ngModel"></ion-input>
+                    </ion-item>
+                    <ion-item  class="PassIcon">
+                        <ion-input type="password"  placeholder="Password" name="password" [(ngModel)]="data.password" #password="ngModel"></ion-input>
+                    </ion-item>
+                </ion-list>
+                <div class="remember_me_sec">
+                    <!-- <ion-label class="remeberMe">  <ion-checkbox color="dark" checked="true" name="remember" [(ngModel)]="data.remember"></ion-checkbox> <span>Remember me</span></ion-label> -->
+                    <div class="Lft_content">
+                            <ion-checkbox color="dark" checked="true" name="remember" [(ngModel)]="data.remember"></ion-checkbox>
+                    <ion-label>Remember me</ion-label>                    
+                </div>
+                <div class="ryt_content">
+                    <ion-buttons end class="rightSubmitBtn">
+                        <button ion-button type="submit" end>Login</button>
+                    </ion-buttons>
+                </div>
+                </div>
+            </form>
+        </div>
+    
+        <div class="borderDevider"></div>
+        <div class="loginFbBtns">
+            <p>
+                <button ion-button full class="fbbutton" (tap)="fbLogin()"><img src="assets/images/fbIcon.png" alt="facebook"  (tap)="fbLogin()"/> Login with facebook</button>
+            </p>
+            <p>
+                <button ion-button full class="googlebutton" (click)="googleLogin()"><img src="assets/images/googleIcon.png" alt="facebook" (click)="googleLogin()"/>  Sign in with Google+</button>
+            </p>
+            <p class="forgotPass" (tap)="ForgotPassword()">Forgot <span>Password?</span></p>
+            <!-- <p class="forgotPass">or </p>
+            <p class="text-center">
+            <a href="javascript:void(0)"  class="forgotPass" (tap)="SignUp()">Register </a>
+        </p> -->
+        </div>
+    </div>
+</div>
+    </ion-content>

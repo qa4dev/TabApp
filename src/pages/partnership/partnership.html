@@ -1,0 +1,19 @@
+<ion-content padding id="page2">
+    <ion-grid>
+        <ion-row class="gridrow">
+            <ion-col class="gridcol">
+            </ion-col>
+            <ion-col>
+                <div class="colmiddle">
+                    <h5>Partnership</h5>
+                </div>
+            </ion-col>
+            <ion-col class="gridcol">
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <div class="spacer" style="height:30px;" id="faq-spacer1"></div>
+    <div>
+        <P *ngFor="let res of data">{{res.para}}</P>
+    </div>
+</ion-content>

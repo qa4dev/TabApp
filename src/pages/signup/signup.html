@@ -1,0 +1,57 @@
+
+    
+    <!-- <ion-header  class="navBarLogin">
+        <ion-navbar>
+            <ion-title text-center class="logoColor">Take Across Border</ion-title>
+        </ion-navbar>
+    </ion-header> -->
+    
+    <ion-content class="myview myview equal_bg_gradiant_color" scrollX="true">
+            <div class="loginPage">
+        <div  class="loginContainer">
+                <div class="hedaer_sec">
+                        <p>Take Across Border</p>
+                        <img src="assets/images/Logo.png" class="header_logo">
+                </div>
+        <div class="loginFormOt">
+                <form #heroForm="ngForm" (ngSubmit)="Signup()">
+                        <ion-list class="loginInput ">
+                            <ion-item  class="userIcon">
+                                <ion-input type="text" placeholder="Username" name="username" [(ngModel)]="data.username"></ion-input>
+                            </ion-item>
+                            <ion-item class="emailIcon">
+                                <ion-input type="email" placeholder="Email" name="email" [(ngModel)]="data.email"></ion-input>
+                            </ion-item>
+                            <ion-item class="PassIcon">
+                                <ion-input type="password" placeholder="Password" name="password" [(ngModel)]="data.password"></ion-input>
+                            </ion-item>
+                            <ion-item class="PassIcon">
+                                <ion-input type="password" placeholder="Confirm Password" name="confirmpassword" [(ngModel)]="data.confirmpassword"></ion-input>
+                            </ion-item>
+                            <ion-item class="MobIcon">
+                                <ion-input type=“tel” maxlength=“10” placeholder="Mobile" name="mobile_number" [(ngModel)]="data.mobile_number" (keyup)="ValidateNumber($event)"></ion-input>
+                            </ion-item>
+                        </ion-list>
+                        <div>
+                            <ion-buttons class="registerBtn">
+                                <button ion-button type="submit" end>Register</button>
+                            </ion-buttons>
+                        </div>
+                    </form>
+
+        </div>
+    
+        <div class="alreadyReg">
+        <p>Already have an Account?
+                <span>Sign In</span>
+
+                
+            </p>
+        </div>
+    </div>
+</div>
+    </ion-content>
+
+
+
+

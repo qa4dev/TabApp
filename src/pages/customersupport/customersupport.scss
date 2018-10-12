@@ -1,0 +1,17 @@
+page-customersupport {
+    .gridrow{ margin-top: -21px; width: 116%; height: 40px; margin-left: -8%; }
+    .gridcol { background-color: #0D69AA; padding-top: 15px;}
+    .colmiddle { text-align: center; color: #0D69AA; padding-top: 5px; font-weight: normal; }
+    #faq-container3 { background-color: #E8E8E8; border-top: 3px solid #0D69AA; }
+    .inputtype { background-color: white; height: 32px; border: 1px solid gray;}
+    .inputspan { color:#0D69AA;}
+    .label {font-size: 1.3rem;}
+    .feedback { background-color: white; border: 1px solid gray; }
+    .submitrow { flex-flow: row-reverse; }
+    .submitbutton { border-radius: 0px; margin: 8px; margin-bottom: 20px; background-color: #0D69AA;}
+    .selectbox { background-color: white; height: 32px; border: 1px solid gray; }
+    .select-icon { position: relative; width: 10px !important; height: 9px !important; }
+    .select-text { margin: -6px;}
+    .selectrow { width: 216% !important; }
+    .selectbox1 {max-width: none;}
+}

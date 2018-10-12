@@ -1,0 +1,117 @@
+<ion-content padding id="page2">
+    <ion-grid>
+        <ion-row class="gridrow">
+            <ion-col class="gridcol">
+            </ion-col>
+            <ion-col>
+                <div class="colmiddle">
+                    <h5>Customer Support</h5>
+                </div>
+            </ion-col>
+            <ion-col class="gridcol">
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <div class="spacer" style="height:30px;" id="faq-spacer1"></div>
+    <ion-grid>
+        <ion-row style="text-align: center;">
+            <ion-col>
+                <ion-icon ios="ios-albums" md="md-albums" style="float: left;"></ion-icon>
+                <div>{{address}}</div>
+            </ion-col>
+            <ion-col>
+                <ion-icon ios="ios-albums" md="md-albums" style="float: left;"></ion-icon>
+                <div>{{email}}</div>
+            </ion-col>
+            <ion-col>
+                <ion-icon ios="ios-call" md="md-call" style="float: left;"></ion-icon>
+                <div>{{phone}}</div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <div id="faq-container3">
+        <form #heroForm="ngForm" (ngSubmit)="customerSupport()">
+            <ion-list id="faq-list11">
+                <ion-row>
+                    <ion-col>
+                        <div>
+                            <ion-label stacked class="label">NAME
+                                <span class="inputspan">*</span>
+                            </ion-label>
+                            <ion-input type="text" class="inputtype" [(ngModel)]="data.name" name="name"></ion-input>
+                        </div>
+                    </ion-col>
+                    <ion-col>
+                        <div>
+                            <ion-label stacked class="label">EMAIL ADDRESS
+                                <span class="inputspan">*</span>
+                            </ion-label>
+                            <ion-input type="text" class="inputtype" [(ngModel)]="data.email" name="email"></ion-input>
+                        </div>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <div>
+                            <ion-label stacked class="label">CONTACT No
+                                <span class="inputspan">*</span>
+                            </ion-label>
+                            <ion-input type="text" class="inputtype" [(ngModel)]="data.phone" name="phone"></ion-input>
+                        </div>
+                    </ion-col>
+                    <ion-col class="selectcolumn">
+                        <div>
+                            <ion-label stacked class="label">PURPOSE
+                                <span class="inputspan">*</span>
+                            </ion-label>
+                            <ion-select [(ngModel)]="data.p_contact" name="p_contact" class="selectbox selectbox1">
+                                <ion-option value="select">SELECT</ion-option>
+                                <ion-option value="Help">Help</ion-option>
+                                <ion-option value="Technical Support">Technical Support</ion-option>
+                                <ion-option value="Not Work">Not Work</ion-option>
+                            </ion-select>
+                            <!-- <ion-input type="text" class="inputtype"></ion-input> -->
+                        </div>
+                    </ion-col>
+                </ion-row>
+                <ion-row class="selectrow">
+                    <ion-col col-6>
+                        <div>
+                            <ion-label stacked class="label">ORDER NUMBER/REQUEST NUMBER
+                                <span class="inputspan">*</span>
+                            </ion-label>
+                            <ion-select [(ngModel)]="data.order_number" name="order_number" class="selectbox">
+                                <ion-option value="select">--SELECT--</ion-option>
+                                <ion-option value="1">1</ion-option>
+                                <ion-option value="2">2</ion-option>
+                                <ion-option value="3">3</ion-option>
+                                <ion-option value="4">4</ion-option>
+                                <ion-option value="5">5</ion-option>
+                                <ion-option value="6">6</ion-option>
+                                <ion-option value="7">7</ion-option>
+                                <ion-option value="8">8</ion-option>
+                                <ion-option value="9">9</ion-option>
+                                <ion-option value="10">10</ion-option>
+                            </ion-select>
+                        </div>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <div>
+                            <ion-label stacked class="label">FEEDBACK/ENQUIRY
+                                <span class="inputspan">*</span>
+                            </ion-label>
+                            <ion-textarea type="text" class="feedback" [(ngModel)]="data.feedback" name="feedback"></ion-textarea>
+                        </div>
+                    </ion-col>
+                </ion-row>
+                <ion-row class="submitrow">
+                    <div>
+                        <button ion-button class="submitbutton">Submit</button>
+                    </div>
+                </ion-row>
+            </ion-list>
+        </form>
+    </div>
+</ion-content>

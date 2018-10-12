@@ -1,0 +1,44 @@
+page-add-travel {
+ 
+    .closebtn{
+        background-color: black;
+        color: #ffff;
+        border-radius: 30px;
+    }
+    
+    .personicon {
+        color: #F8CF02;
+    }
+    .boxes{
+        border: 1px solid;
+        border-color:#808080;
+        height: 40px;
+    }
+    .label{
+        font-size: 15px;
+        margin-bottom: 0px;
+    }
+    .travelcontent{
+        background-color:#E8E8E8;
+        border-top: 2px solid;
+        border-color: #0E5FA0;
+        margin: 15px;
+        margin-top: 45px;
+        padding: 15px;
+        padding-bottom: 30px;
+    }
+
+    .submit{
+        background-color: #0E5FA0;
+        height: 40px;
+        width: 100px;
+        margin-top: 13px;
+        float: right;
+        color: #ffff;
+        border-radius: 4px;
+        margin-top: -16px;
+        margin-bottom: 12px;
+        margin-right: 0px;
+    }
+    
+}

@@ -1,0 +1,54 @@
+<ion-content class="same_sec_pad_topbtm">
+
+    <div class="addMomentBtn">
+        <button ion-button  (tap)="travelmoments()" class="blueBtn">Add Moments</button>
+    </div>
+    <ul class="momentGrid">
+        <li *ngFor="let res of data">
+            <div class="gridInner">
+               <div class="momentImg" *ngIf="res.datatype == 'image'" > 
+                   <img src={{res.media}} />
+                </div>
+                <p class="single_text_style" *ngIf="res.datatype == 'text'">{{res.media}}</p>
+                <div class="moment_video" *ngIf="res.datatype == 'video'">
+                    <video controls="controls" preload="metadata" autoplay="autoplay" webkit-playsinline="webkit-playsinline"
+                        class="videoPlayer" >
+                        <source src={{res.media}} type="video/mp4" />
+                    </video>
+                </div>
+                <div class="moment_content">
+                    <div class="left_sec">
+                        <div class="sec_top">
+                            <div class="moment_equal_icon" name=""><a href="#"><img src="assets/images/Moment_heart.png"></a>
+                                {{res.likes}}</div>
+                            <div class="moment_equal_icon" name=""><a href="#"><img src="assets/images/Moment_chat.png"></a>
+                                {{res.comments}}</div>
+                        </div>
+                        <div class="sec_heading">
+                            {{res.title}}
+                        </div>
+                        <div class="moment_location_with_img_sec">
+                            <div class="moment_equal_icon" name="navigate"><img src="assets/images/Moment_map.png">
+                                {{res.location}}</div>
+                        </div>
+                    </div>
+                    <div class="ryt_sec"><img src="assets/images/men1.png" class="moment_img"></div>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <div class=" add_moment_icons_sec">
+            <ul class="add_moment_icons">
+                <a href="#">
+                    <li class="momemt_video_icon"><img src="assets/images/Moment_video.png"></li>
+                </a>
+                <a href="#">
+                    <li class="momemt_camera_icon"><img src="assets/images/Moment_camera.png"></li>
+                </a>
+                <a href="#">
+                    <li class="momemt_edit_icon"><img src="assets/images/Moment_edit.png"></li>
+                </a>
+            </ul>
+    </div>
+
+</ion-content>
