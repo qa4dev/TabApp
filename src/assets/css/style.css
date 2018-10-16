@@ -1428,6 +1428,8 @@ padding: 2%;
 .msg_list li {
     display: block;
     width: 100%;
+    float: left;
+    margin-bottom: 2em;
 }
 
 .msg_container {
@@ -1438,15 +1440,127 @@ padding: 2%;
 .msg_box {
     float: left;
     width: 100%;
+    background: #e8e8e8;
+    border-top: solid 2px #6cb3f0;
+    padding: 1em;
 }
+
+
 
 .msg_profile_pic {
     float: left;
     width: 10%;
     margin-right: 1em;
+    border-radius: 100%;
+    overflow: hidden;
+    border: solid 1px #a7a7a7;
+    text-align: center;
+    height: 5em;
 }
+
+.msg_profile_pic img {opacity:0;}
+
+
 
 .msg_content {
     float: left;
-    width: 80%;
+    width: 75%;
+    font-size: 1.2em;
+}
+
+.msg_info {
+    float: left;
+    width: 12%;
+}
+
+.msg_footer {
+    float: left;
+    width: 100%;
+    padding: 1em 0;
+    padding-left: 6em;
+}
+
+.msg_footer .accept_btn, .msg_footer .revise_btn, .msg_footer .decline_btn {
+    background: #6cb3f0;
+    color: #ffffff !important;
+    cursor: pointer;
+    display: block;
+    float: left;
+    width: 10em;
+    text-align: center;
+    padding: 1em;
+    border-radius: 5px;
+}
+
+a.revise_btn {
+    margin: 0 1em;
+}
+
+.recent_container {
+    float: left;
+    width: 100%;
+}
+
+.recent_product_list li {
+    display: inline-block;
+    width: 47%;
+    float: left;
+    margin-right: 2em;
+    margin-bottom: 2em;
+}
+
+.recent_product_list li:nth-child(even) {
+    margin-right: 0;
+}
+
+.recent_header {
+    float: left;
+    width: 100%;
+}
+
+.recent_img {
+    float: left;
+    width: 100%;
+    margin: 1em 0;
+}
+
+.recent_img img {opacity:0;}
+
+
+
+.recent_header a {
+    display: block;
+    text-align: center;
+    padding: 0.5em;
+    font-size: 1.2em;
+    color:#fff;
+}
+
+.recent_details {
+    background: #f2f2f2;
+    padding: 1em;
+    float: left;
+    width: 100%;
+}
+
+.recent_footer_info {
+    float: left;
+    width: 100%;
+}
+
+.recent_footer_info .price {
+    float: left;
+    width: 85%;
+    font-weight: 500;
+}
+
+.recent_footer_info .recent_flag {
+    float: left;
+    width: 15%;
+}
+
+.recent_box {
+    float: left;
+    width: 100%;
+    border: solid 1px #0d5d9e;
 }
