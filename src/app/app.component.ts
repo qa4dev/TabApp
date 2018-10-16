@@ -9,7 +9,7 @@ import { ModalController } from 'ionic-angular';
 })
 export class MyApp {
     @ViewChild(Nav) nav: Nav;
-    rootPage: any = 'LoginPage';
+    rootPage: any = 'ProfiletransactionPage';
     aboutus: boolean = false;
     pages: Array<{ title: string, component: any }>;
     aboutPages: Array<{ title: string, component: any }>;
@@ -19,13 +19,16 @@ export class MyApp {
         
         this.initializeApp();
         this.pages = [
-            { title: 'Home', component: 'HomePage' },
-            { title: 'Video Capture', component: 'VideoPage' },
+            // { title: 'Home', component: 'HomePage' },
+            // { title: 'Video Capture', component: 'VideoPage' },
+            { title: 'Notifications', component: 'NotificationPage' },
+            { title: 'Inbox', component: 'InboxPage' },            
             { title: 'My upcoming trips', component: 'MyupcomingtripPage' },
+            { title: 'My Travel checklist', component: 'MytravelchecklistPage' },
+            { title: 'Recent likes', component: 'RecentlikesPage' },
+            { title: 'Rate and review us', component: 'RateandreviewusPage' },
             { title: 'Settings', component: 'SettingPage' },
-            { title: 'CountryPage', component: 'CountryPage' },    
-            
-            
+            { title: 'Follow and like us', component: 'FollowandlikeusPage' }, 
         ];
 
     }

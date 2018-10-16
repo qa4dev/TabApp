@@ -17,8 +17,6 @@ export class TakeacrossborderPage {
   slides: any;
   currentIndex = 0;
   result: any;
- // elementRef:any;
- // @ViewChild('s') mapElement: ElementRef;
 
   constructor(
       public navCtrl: NavController,
@@ -27,49 +25,6 @@ export class TakeacrossborderPage {
       private apiservice: Apiservice,
       private elementRef:ElementRef
   ) {
-
-      // this.slides = [
-      //     {
-      //         title: "Fasion",
-      //         description: "The <b>Ionic Component Documentation</b> showcases a number of useful components that are included out of the box with Ionic.",
-      //         image: "assets/imgs/ica-slidebox-img-1.png",
-      //     },
-      //     {
-      //         title: "Food",
-      //         description: "<b>Ionic Framework</b> is an open source SDK that enables developers to build high quality mobile apps with web technologies like HTML, CSS, and JavaScript.",
-      //         image: "assets/imgs/ica-slidebox-img-2.png",
-      //     },
-      //     {
-      //         title: "Shoes",
-      //         description: "The <b>Ionic Cloud</b> is a cloud platform for managing and scaling Ionic apps with integrated services like push notifications, native builds, user auth, and live updating.",
-      //         image: "assets/imgs/ica-slidebox-img-3.png",
-      //     },
-      //     {
-      //         title: "Electronic",
-      //         description: "The <b>Ionic Cloud</b> is a cloud platform for managing and scaling Ionic apps with integrated services like push notifications, native builds, user auth, and live updating.",
-      //         image: "assets/imgs/ica-slidebox-img-4.png",
-      //     },
-      //     {
-      //         title: "Mechanic",
-      //         description: "The <b>Ionic Component Documentation</b> showcases a number of useful components that are included out of the box with Ionic.",
-      //         image: "assets/imgs/ica-slidebox-img-1.png",
-      //     },
-      //     {
-      //         title: "Science",
-      //         description: "<b>Ionic Framework</b> is an open source SDK that enables developers to build high quality mobile apps with web technologies like HTML, CSS, and JavaScript.",
-      //         image: "assets/imgs/ica-slidebox-img-2.png",
-      //     },
-      //     {
-      //         title: "Maths",
-      //         description: "The <b>Ionic Cloud</b> is a cloud platform for managing and scaling Ionic apps with integrated services like push notifications, native builds, user auth, and live updating.",
-      //         image: "assets/imgs/ica-slidebox-img-3.png",
-      //     },
-      //     {
-      //         title: "English",
-      //         description: "The <b>Ionic Cloud</b> is a cloud platform for managing and scaling Ionic apps with integrated services like push notifications, native builds, user auth, and live updating.",
-      //         image: "assets/imgs/ica-slidebox-img-4.png",
-      //     }
-      // ];
 
       this.homedata();
   }
@@ -248,6 +203,11 @@ export class TakeacrossborderPage {
         });
         
     }
+    }
+
+
+    coutriesList(){
+        this.navCtrl.push('CountryPage');
     }
 
     
